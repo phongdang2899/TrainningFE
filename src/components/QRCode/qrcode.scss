@@ -1,0 +1,44 @@
+.ant-alert {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    top: -15%;
+    width: 100%;
+}
+
+.tabs {
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: white;
+}
+
+.active-tabs {
+    background-color: #f1efd6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-img {
+    background-image: url(https://cdn2.vectorstock.com/i/1000x1000/01/26/modern-qr-code-background-vector-2160126.jpg);
+    height: 100vh;
+}
+
+.table-container::-webkit-scrollbar {
+    width: 6px;
+    /* Độ rộng của thanh cuộn */
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Màu nền của thanh cuộn */
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Màu của thanh cuộn */
+    border-radius: 4px;
+    /* Đường viền cong của thanh cuộn */
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Màu của thanh cuộn khi hover */
+}
