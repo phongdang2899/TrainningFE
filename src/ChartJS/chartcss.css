@@ -1,0 +1,287 @@
+.chart-app{
+    display: flex;
+}
+
+.chartdate{
+    width: 99%;
+    padding-right: 1%;
+    border: 1px solid rgb(245, 245, 245);
+    padding-left: 10px;
+    box-shadow: #AAA;
+}
+.chartmonth{
+    width: 100%;
+    border: 1px solid rgb(245, 245, 245);
+    box-shadow:  #AAA;
+}
+
+.chartmonth .chartmonth-ate canvas {
+    width: 100% !important;
+    padding-left: 1%;
+}
+.chart-rext{
+    display: flex;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.date-chart-inter{
+    width: 50%;
+    padding-left: 2rem;
+    display: flex;
+    gap: 20px;
+}
+.date-chart-info{
+    border-bottom: 1px solid rgb(173, 173, 173);
+}
+.date-chart-inter input{
+    border: none;
+}
+
+.month-chart-inter{
+    width: 50%;
+    display: flex;
+    gap: 20px;
+}
+.month-chart-info{
+    border-bottom: 1px solid rgb(173, 173, 173);
+}
+
+.month-chart-inter input{
+    border: none;
+}
+.date-chart-drive button{
+ border: 1px solid #5769c0;
+ background: white;
+ color: #5769c0;
+ height: 30px;
+ width: 60px;
+ border-radius: 4px;
+}
+.month-chart-drive button{
+    border: 1px solid #5769c0;
+    background: white;
+    color: #5769c0;
+    height: 30px;
+    width: 60px;
+    border-radius: 4px;
+   }
+   .transaction-during{
+    padding-left: 15px;
+    color: #7c6c6c;
+}
+.transaction-date{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.transaction-success{
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.transaction-success button{
+    width: 35px;
+    height: 15px;
+    background-color: #a2eb36;
+    border: none;
+}
+.transaction-success p{
+    font-size: 12px;
+}
+.transaction-faulty{
+    display: flex;
+    align-items: center;
+}
+.transaction-faulty button{
+    width: 35px;
+    height: 15px;
+    background-color: #ff0000;
+    border: none;
+}
+.transaction-faulty p{
+    font-size: 12px;
+}
+.transaction-dream{
+    display: flex;
+    align-items: center;
+}
+.transaction-dream button{
+    width: 35px;
+    height: 15px;
+    background-color: #3f51b5;
+    border: none;
+}
+.transaction-dream p{
+    font-size: 12px;
+}
+.transaction-unfinished{
+    display: flex;
+    align-items: center;
+}
+.transaction-unfinished button{
+    width: 35px;
+    height: 15px;
+    background-color: #fb9909;
+    border: none;
+}
+.transaction-unfinished p{
+    font-size: 12px;
+}
+
+
+.transaction-month{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.transaction-success{
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.transaction-success button{
+    width: 35px;
+    height: 15px;
+    background-color: #a2eb36;
+    border: none;
+}
+.transaction-success p{
+    font-size: 12px;
+}
+.transaction-faulty{
+    display: flex;
+    align-items: center;
+}
+.transaction-faulty button{
+    width: 35px;
+    height: 15px;
+    background-color: #ff0000;
+    border: none;
+}
+.transaction-faulty p{
+    font-size: 12px;
+}
+.transaction-dream{
+    display: flex;
+    align-items: center;
+}
+.transaction-dream button{
+    width: 35px;
+    height: 15px;
+    background-color: #3f51b5;
+    border: none;
+}
+.transaction-dream p{
+    font-size: 12px;
+}
+.transaction-unfinished{
+    display: flex;
+    align-items: center;
+}
+.transaction-unfinished button{
+    width: 35px;
+    height: 15px;
+    background-color: #fb9909;
+    border: none;
+}
+.transaction-unfinished p{
+    font-size: 12px;
+}
+
+.transaction{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+
+  
+}
+.transaction-during {
+    width: 50%;
+}
+.transaction .transaction-during .transaction-during-date{
+    background: #26c6da;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    display: flex;
+
+}
+.transaction .transaction-during-date p{
+    color: #eff5ef;
+    font-size:20px;
+    padding-left: 20px;
+}
+.transaction-during-table{
+    padding-top: 30px;
+    width: 100%;
+}
+.transaction .transaction-code{
+    background: #26c6da;
+    width: 100%;
+    height: 60px;
+}
+.transaction .transaction-code p{
+    color: #eff5ef;
+    font-size:20px;
+    padding-left: 20px;
+}
+.transaction-during-name {
+    border: 1px solid #f3f3f3;
+}
+.transaction-during-name table{
+    width: 100%;
+}
+.transaction-during-name td{
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+.transaction-during-name th{
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: black;
+}
+.transaction-code-list{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.transaction-dateall-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    gap: 20px;
+}
+.transaction-dateall{
+   border-bottom: 2px solid #dddddd; 
+}
+.trasaction-handle button{
+    border: 1px solid #5769c0;
+    background: white;
+    color: #5769c0;
+    width: 64px;
+    height: 35px;
+}
+.trasaction-handle{
+    display: flex;
+
+    padding-top: 3rem;
+}
+.trasaction-start-date-info input{
+border: none;
+}
+.trasaction-end-date-info input{
+    border: none;
+}
+.trasaction-end-date{
+    border-bottom: 2px solid #dddddd;
+}
+.trasaction-start-date-info{
+    border-bottom: 2px solid #dddddd;
+}
