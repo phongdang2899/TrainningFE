@@ -5,13 +5,13 @@ import axios from 'axios';
 import { useEffect } from 'react';
 
 import { ModalAdmin } from './ModalAdmin/ModalAdmin';
-import {  UserAddOutlined } from '@ant-design/icons';
+import { UserAddOutlined } from '@ant-design/icons';
 
 export const Admin = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [user, setUser] = useState([])
     console.log('userdata', user)
-    const token = 'Bearer 21|INa38hsF0vgapnlM2j46eCPpi1yhSACfglNn5EXr'
+    const token = 'Bearer 31|pSMsrWjx53XsaIv0s7myNv0dJLiz9CwLm4o2RJlM'
     const DataUse = `http://172.23.144.1:8383/api/v1/admin/users`
     const [render, setRender] = useState(false)
 
@@ -30,6 +30,7 @@ export const Admin = () => {
             catch (error) {
                 console.error(error);
             }
+
         }
         fetchData()
     }, [render]);
@@ -37,7 +38,6 @@ export const Admin = () => {
     const showModal = () => {
         setIsModalOpen(true);
     };
-
     const handleOk = () => {
         setIsModalOpen(false);
     };
@@ -48,8 +48,8 @@ export const Admin = () => {
 
     return (
         <>
-            <Button  style={{width:'50px'}} type="primary" onClick={showModal} icon={<UserAddOutlined />}/>
-             
+            <Button style={{ width: '50px' }} type="primary" onClick={showModal} icon={<UserAddOutlined />} />
+
             <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
                 <div>
                     <div>
@@ -100,4 +100,4 @@ export const Admin = () => {
             </Modal>
         </>
     )
-}
+};

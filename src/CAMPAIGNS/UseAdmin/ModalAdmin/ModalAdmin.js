@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Button, Modal } from 'antd';
-import {  UserAddOutlined } from '@ant-design/icons';
+import { Button, Modal, notification } from 'antd';
+import { UserAddOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import './ModalAdmin.css'
 
@@ -12,6 +12,7 @@ export const ModalAdmin = (props) => {
     const [lastname, setLastName] = useState(item.last_name)
     const [phonenumber, setPhoneNumber] = useState(item.phone_number)
     const [Email, setEmail] = useState(item.email)
+    //
     const [firstNameError, setFirstNameError] = useState("");
     const [lastNameError, setLastNameError] = useState("");
     const [phoneNumberError, setPhoneNumberError] = useState("");
@@ -26,16 +27,30 @@ export const ModalAdmin = (props) => {
     };
 
     const handleOk = async (e) => {
-        let res = await axios.put(`http://172.23.144.1:8383/api/v1/admin/users/${item.user_id}?role_id=${item.role.role_id}&status=${item.status.id}&first_name=${firstname}&phone_number=${phonenumber}&gender=${item.gender}&last_name=${lastname}&email=${Email}`, {}, {
-            headers: {
-                'Authorization': token
-            }
-        });
-        alert('Thay đổi Thành Công ')
 
-        setRender(!render)
 
-        setIsModalOpen(false);
+        try {
+            let res = await axios.put(`http://172.23.144.1:8383/api/v1/admin/users/${item.user_id}?role_id=${item.role.role_id}&status=${item.status.id}&first_name=${firstname}&phone_number=${phonenumber}&gender=${item.gender}&last_name=${lastname}&email=${Email}`, {},
+                {
+                    headers: {
+                        'Authorization': token
+                    }
+                });
+            setRender(!render);
+            setIsModalOpen(false);
+
+            notification.success({
+                message: 'Thành công',
+                description: 'Thay đổi thành công'
+            });
+        } catch (error) {
+            notification.error({
+                message: 'Lỗi',
+                description: 'Thay đổi thất bại,'
+            });
+        }
+
+
     };
 
     const handleCancel = () => {

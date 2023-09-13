@@ -15,15 +15,15 @@ export const API = () => {
     const [data, setData] = useState([])
     const [dataInput, setDataInput] = useState([])
     // const [search, setsearch] = useState('')
-   
+
     const [render, setRender] = useState(false)
     const [total, setTotal] = useState(0)
     const [page, setPage] = useState(1)
 
-    const token = 'Bearer 21|INa38hsF0vgapnlM2j46eCPpi1yhSACfglNn5EXr'
-    const dataCode = `http://172.23.144.1:8383/api/v1/admin/codes?page=${page}&per_page=20`
+    const token = 'Bearer 28|xXKfSJsRAbkvdXAqLPFQrP9Elwbap026I7z7CFVH'
+    const dataCode = `http://172.23.144.1:8383/api/v1/admin/codes?page=${page}&per_page=50`
     const [loading, setloading] = useState(true)
-    
+
     useEffect(() => {
 
         /////codde
@@ -37,14 +37,9 @@ export const API = () => {
 
                 console.log('res', res.data.meta.total)
                 setTotal(res.data.meta.total)
-
-
                 setData(res.data.data)
-
                 setDataInput(res.data.data)
                 setloading(false)
-
-
 
             }
             catch (error) {
@@ -55,22 +50,16 @@ export const API = () => {
     }, [render, page]);
     /// của campaings
     console.log('datainput', dataInput)
-
-
     const onchangeinput = (e) => {
         // setsearch(e.target.value)
-
         // let currentData = data.filter(item => item.code.includes(e.target.value));
         // setData(currentData);
-
         if (e.target.value === "") {
             setData(dataInput);
-           
         }
         else {
             let currentData = data.filter(item => item.code.includes(e.target.value));
             setData(currentData);
-           
         }
     }
 
@@ -200,7 +189,7 @@ export const API = () => {
                         <th>Chức năng </th>
                     </tr>
                 </tbody>
-                { loading === false && data.map((item) => {
+                {loading === false && data.map((item) => {
                     return (
                         <tbody key={item.code_id}>
                             <tr >
@@ -224,21 +213,22 @@ export const API = () => {
                     )
                 })
                 }
+
             </table>
             <div className='loading-api'>
-            {loading === true &&
+                {loading === true &&
 
-                <Spin size="large" className='pin'>
-                    {/* ... */}
-                </Spin>
+                    <Spin size="large" className='pin'>
+                        {/* ... */}
+                    </Spin>
 
-            }</div>
+                }</div>
             <ReactPaginate
                 nextLabel="Next  >"
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={5}
                 marginPagesDisplayed={4}
-                pageCount={total / 20}
+                pageCount={total / 50}
                 previousLabel="< Back"
                 pageClassName="page-item"
                 pageLinkClassName="page-link"

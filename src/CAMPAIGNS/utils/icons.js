@@ -1,4 +1,4 @@
-import { AiFillEye,AiOutlineDelete } from "react-icons/ai";
+import { AiFillEye, AiOutlineDelete } from "react-icons/ai";
 
 const icons = {
     AiFillEye,
